@@ -1,4 +1,7 @@
 mixin item (title, description)
   .item
-    h1.item-title title
-    p.item-description description
+    h1.item-title= title
+    p.item-description= description
+
+mixin button (href, buttonText)
+  a.btn(class!=attributes.class href=href)= buttonText
