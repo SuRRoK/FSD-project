@@ -1,0 +1,13 @@
+extends ../layouts/main
+
+block variables
+  - var title = 'Main page'
+  - var pageClass = 'main'
+  - var description = 'Jade - cool tool'
+
+block content
+  section
+    .container
+      i.material-icons face
+      +item('item title', description)
+      .wrapper__hello Blue text

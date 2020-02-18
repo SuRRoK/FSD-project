@@ -1,0 +1,41 @@
+// Font
+$mainFont                : 'Montserrat', Helvetica, Arial, sans-serif;
+
+// Size
+$mainFontColor           : #1F2041;
+$mainFontSize            : 14px;
+$mainFontWeight          : 400;
+$mainLineHeight          : 1.4;
+
+$desktopWidth            : 1440px;
+$smDesktopWidth          : 980px;
+$tableWidth              : 768px;
+$phoneWidth              : 480px;
+$smPhoneWidth            : 320px;
+
+// Main color
+$default-color           : #ffffff;
+$primary-color           : #444ce0;
+$success-color           : #26de81;
+$danger-color            : #fc5c65;
+$warning-color           : #fed330;
+$light-color             : #999999;
+$purple-color            : #BC9CFF;
+$green-color             : #6FCF97;
+
+// Neutral Color
+$neutral-primary         : rgba(31, 32, 65, 0.75);
+$neutral-regular         : rgba(31, 32, 65, 0.5);
+$neutral-secondary       : rgba(31, 32, 65, 0.25);
+$neutral-placeholder     : rgba(31, 32, 65, 0.25);;
+
+// Border Color
+$border-base             : rgba(31, 32, 65, 0.25);
+$border-hover            : rgba(31, 32, 65, 0.5);
+$border-light            : #E4E7ED;
+$border-lighter          : #EBEEF5;
+$border-lightex          : #F2F6FC;
+
+//Gradient
+$purple-gradient         : linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+$green-gradient          : linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
