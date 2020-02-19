@@ -1,6 +1,30 @@
+-
+  var mainMenu = [
+    {text: 'Компоненты', href: '/components.html', dropdown: false},
+    {text: 'о нас', href: '#', dropdown: false},
+    {
+      text: 'услуги', dropdown: true, dropdownMenu: [
+        {text: 'hello', href: '#', dropdown: false},
+      ]
+    },
+    // {text: 'вакансии', href: '#', dropdown: false},
+    {text: 'новости', href: '#', dropdown: false},
+    {
+      text: 'соглашения', dropdown: true, dropdownMenu: [
+        {text: 'bye', href: '#', dropdown: false},
+      ]
+    }
+  ]
+
+- var dropdownIcon = 'expand_more'
+
 header
   .container
-    .header--logo
+    .header-logo
+      img(src='/assets/img/logo.svg')
+    .nav-buttons-wrapper
       nav.header--menu
-
-      .header--buttons
+        +menu(mainMenu, dropdownIcon)
+      .header--user-buttons
+        +button('#','войти')(class="btn-purple-light")
+        +button('#','зарегистрироваться')(class="btn-purple")

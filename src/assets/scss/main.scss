@@ -28,11 +28,42 @@ body {
   font-weight: $mainFontWeight;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  line-height: 24px;
+  color: $neutral-primary;
 }
 
 *, *:before, *:after { box-sizing: border-box; }
 
 h1, h2, h3, h4, h5, h6 { margin: 0; }
+
+h1 {
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: $mainFontColor ;
+}
+
+h2 {
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+  color: $mainFontColor ;
+}
+
+h3 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: $mainFontColor ;
+}
 
 a { text-decoration: none; }
 
@@ -73,6 +104,7 @@ section, .section {
 }
 
 .container {
+  display: flex;
   width: 100%;
   flex: 0 0 auto;
   position: relative;
@@ -87,6 +119,32 @@ section, .section {
   @media screen and (max-width: $phoneWidth) {
     max-width: $smPhoneWidth;
   }
+}
+
+
+.btn-purple {
+  background: $purple-gradient;
+  color: $default-color;;
+  &:hover {
+    opacity: 0.5;
+  }
+  &-light {
+    padding: 14px 19px;
+    border: solid 2px transparent;
+    background-image: linear-gradient(#fff, #fff), $purple-gradient;
+    background-clip: padding-box, border-box;
+    color: $purple-color;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+.components {
+  margin: 5px;
+}
+.nav-buttons-wrapper {
+  display: flex;
 }
 
 

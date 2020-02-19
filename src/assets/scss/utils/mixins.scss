@@ -31,6 +31,7 @@
 
 .btn {
   display: inline-block;
+  font-family: $mainFont;
   font-weight: 600;
   color: $mainFontColor;
   text-align: center;
@@ -38,7 +39,7 @@
   cursor: pointer;
   user-select: none;
   background-color: transparent;
-  padding: 15px 20px;
+  padding: 16px 21px;
   text-transform: uppercase;
   font-size: $buttonFontSize ;
   line-height: 1;
@@ -46,26 +47,77 @@
   &:hover {
     text-decoration: none;
   }
-}
-
-.btn-purple {
-  background: $purple-gradient;
-  color: $neutral-primary;
-  &:hover {
-    opacity: 0.5;
-  }
-  &-light {
-    padding: 13px 18px;
-    border: solid 2px transparent;
-    background-image: linear-gradient(#fff, #fff), $purple-gradient;
-    background-clip: padding-box, border-box;
-    color: $purple-color;
-    &:hover {
-      opacity: 0.5;
+  &--with-figure {
+    position: relative;
+    padding: 16px 100px;
+    display: flex;
+    align-items: center;
+    &_figure {
+      position: absolute;
+      right:8px;
     }
   }
 }
 
+.main-menu {
+  display: flex;
+  &__item {
+    list-style-type: none;
+    padding-left: 30px;
+    color: $neutral-regular;
+    text-transform: uppercase;
+    &-dropdown {
+      display: block;
+      position: relative;
+      cursor: pointer;
+      padding-right: 24px;
+      &-icon {
+        position: absolute;
+        right:0;
+      }
+    }
+  }
+  &__link {
+    color: $neutral-regular;
+  }
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: mediumpurple;
+  min-height: 100px;
+  max-width: 100px;
+  &__item {
+
+  }
+  &__link {
+
+  }
+}
+
+.input-text {
+  display: block;
+  border: solid 1px $neutral-secondary;
+  border-radius: 4px;
+  height: 44px;
+  width: 320px;
+  padding-left: 15px;
+  &::placeholder {
+    color: $neutral-placeholder;
+    margin-left: 15px;
+  }
+  &__label {
+    text-transform: uppercase;
+    color: $mainFontColor;
+  }
+  &:hover, &:focus {
+    border-color: $neutral-regular ;
+    &::placeholder {
+      color: $neutral-regular ;
+    }
+  }
+}
 
 
 

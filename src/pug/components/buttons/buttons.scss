@@ -7,7 +7,7 @@
   cursor: pointer;
   user-select: none;
   background-color: transparent;
-  padding: 15px 20px;
+  padding: 19px 22px;
   text-transform: uppercase;
   font-size: $buttonFontSize ;
   line-height: 1;
@@ -20,12 +20,12 @@
 
 .btn-purple {
   background: $purple-gradient;
-  color: $neutral-primary;
+  color: $default-color;
   &:hover {
     opacity: 0.5;
   }
   &-light {
-    padding: 13px 18px;
+    padding: 19px 20px;
     border: solid 2px transparent;
     background-image: linear-gradient(#fff, #fff), $purple-gradient;
     background-clip: padding-box, border-box;

@@ -1,0 +1,20 @@
+extends ../layouts/main
+
+block variables
+  -var title = 'Components'
+  -var buttonFigure = 'arrow_forward'
+
+block content
+  section
+    .wrapper
+        div.components
+          span.components
+            +button('#','click me')(class="btn-purple-light")
+          span.components
+            +button('#','click me')(class="btn-purple")
+        div.components
+          +button-arrow('#','click me', buttonFigure)(class="btn-purple")
+        div.components
+          +input-text('just','Hello', 'Say me')
+        div.components
+          +input-text('email','Enter e-mail', 'E-mail', 'email')

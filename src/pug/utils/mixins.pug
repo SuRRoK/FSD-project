@@ -5,3 +5,38 @@ mixin item (title, description)
 
 mixin button (href, buttonText)
   a.btn(class!=attributes.class href=href)= buttonText
+
+mixin button-arrow (href, buttonText, figure)
+  button.btn.btn--with-figure(class!=attributes.class href=href)= buttonText
+    i.material-icons.btn--with-figure_figure= figure
+
+mixin dropdown-menu-item (text, href)
+  li.dropdown-menu__item
+    a.main-menu__link(href=href)= text
+
+mixin menu-item (text, href)
+  li.main-menu__item
+    a.main-menu__link(href=href)= text
+
+mixin menu-item-dropdown (text, items, icon)
+  li.main-menu__item.main-menu__item-dropdown= text
+    i.material-icons.main-menu__item-dropdown-icon= icon
+    ul.dropdown-menu
+      each val in items
+        +dropdown-menu-item(val.text, val.href)
+
+mixin menu (items, dropdownIcon)
+  ul.main-menu
+    each val in items
+      if val.dropdown
+        +menu-item-dropdown(val.text, val.dropdownMenu, dropdownIcon)
+      else
+        +menu-item(val.text, val.href)
+
+mixin input-text(name, placeholder, label, type)
+  if !type
+    - var type = "text"
+  div.input-field
+    if label
+      label(for=name).input-text__label= label
+    input(type=type, name=name, id=name, placeholder= placeholder).input-text

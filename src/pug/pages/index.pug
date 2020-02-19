@@ -1,17 +1,10 @@
 extends ../layouts/main
 
 block variables
-  - var title = 'Main page'
-  - var buttonText = 'Main page'
-  - var pageClass = 'main'
-  - var description = 'Jade - cool tool'
+  -var title = 'Main page'
 
 block content
-  section
+  main
     .container
-      i.material-icons face
-      +item(title, description)
-      .wrapper__hello Blue text
-        div
-          +button('#','CLICK ME')(class="btn-purple")
-          +button('#','click me')(class="btn-purple-light")
+
+
