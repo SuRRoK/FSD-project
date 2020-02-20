@@ -6,7 +6,7 @@ mixin item (title, description)
 mixin button (href, buttonText)
   a.btn(class!=attributes.class href=href)= buttonText
 
-mixin button-arrow (href, buttonText, figure)
+mixin button-with-figure (href, buttonText, figure)
   button.btn.btn--with-figure(class!=attributes.class href=href)= buttonText
     i.material-icons.btn--with-figure_figure= figure
 

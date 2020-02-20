@@ -18,13 +18,15 @@
 
 - var dropdownIcon = 'expand_more'
 
-header
+header.header
   .container
-    .header-logo
-      img(src='/assets/img/logo.svg')
-    .nav-buttons-wrapper
-      nav.header--menu
-        +menu(mainMenu, dropdownIcon)
-      .header--user-buttons
-        +button('#','войти')(class="btn-purple-light")
-        +button('#','зарегистрироваться')(class="btn-purple")
+    .header-wrapper
+      .header__logo
+        a(href='/')
+          img(src='/assets/img/logo.svg')
+      .header__menu-buttons-wrapper
+        nav.header__menu
+          +menu(mainMenu, dropdownIcon)
+        .header__user-buttons
+          +button('#','войти')(class="btn-purple-light header__button")
+          +button('#','зарегистрироваться')(class="btn-purple header__button")

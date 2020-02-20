@@ -76,7 +76,7 @@ ul, li {
 section, .section {
   position: relative;
   padding: 40px 0;
-  @media screen and (max-width: $desktopWidth) {
+  @media screen and (max-width: $lgDesktopWidth) {
     padding: 36px 0;
   }
   @media screen and (max-width: $desktopWidth) {
@@ -109,7 +109,10 @@ section, .section {
   flex: 0 0 auto;
   position: relative;
   margin: 0 auto;
-  max-width: $desktopWidth;
+  max-width: $lgDesktopWidth;
+  @media screen and (max-width: $desktopWidth) {
+    max-width: $smDesktopWidth;
+  }
   @media screen and (max-width: $smDesktopWidth) {
     max-width: $tableWidth;
   }
@@ -121,6 +124,25 @@ section, .section {
   }
 }
 
+.header {
+  &-wrapper {
+    margin: 15px 140px ;
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__menu-buttons-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  &__button {
+    margin-left: 20px;
+    padding: 11px 25px;
+  }
+}
 
 .btn-purple {
   background: $purple-gradient;
@@ -129,7 +151,7 @@ section, .section {
     opacity: 0.5;
   }
   &-light {
-    padding: 14px 19px;
+    padding: 9px 21px;
     border: solid 2px transparent;
     background-image: linear-gradient(#fff, #fff), $purple-gradient;
     background-clip: padding-box, border-box;
