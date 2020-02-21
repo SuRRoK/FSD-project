@@ -61,11 +61,26 @@
 
 .main-menu {
   display: flex;
+  @media screen and (max-width: $smDesktopWidth) {
+    //padding-left: 5px;
+    flex-direction: column;
+  }
   &__item {
     list-style-type: none;
     padding-left: 20px;
     color: $neutral-regular;
     text-transform: uppercase;
+    @media screen and (max-width: $desktopWidth) {
+      padding-left: 10px;
+    }
+
+    @media screen and (max-width: $smDesktopWidth) {
+      padding-left: 5px;
+    }
+
+    @media screen and (max-width: $tableWidth) {
+      padding-left: 3px;
+    }
     &-dropdown {
       display: block;
       position: relative;
@@ -97,11 +112,12 @@
 }
 
 .input-text {
+  $input-width: 260px;
   display: block;
   border: solid 1px $neutral-secondary;
   border-radius: 4px;
   height: 44px;
-  width: 320px;
+  width: $input-width;
   padding-left: 15px;
   &::placeholder {
     color: $neutral-placeholder;
@@ -109,6 +125,7 @@
   }
   &__label {
     text-transform: uppercase;
+    position: relative;
     color: $mainFontColor;
   }
   &:hover, &:focus {
@@ -117,8 +134,55 @@
       color: $neutral-regular ;
     }
   }
+
+  &_with-figure {
+
+    &:after {
+      position: absolute;
+      top: 30px;
+      left: $input-width - 34px;
+      background: $purple-gradient;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      @extend .material-icons;
+      content: 'arrow_forward';
+    }
+
+    &_no-label {
+      &:after {
+        top: 24px;
+      }
+    }
+  }
 }
 
+.footer-menu {
+
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  &__column {
+    //margin-right: 40px;
+  }
+  &__head {
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: bold;
+    color: $mainFontColor;
+    line-height: 15px;
+    margin-bottom: 21px;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+  }
+  &__link {
+    color: $neutral-regular;
+  }
+}
 
 
 

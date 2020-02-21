@@ -1,3 +1,44 @@
-footer
+-
+  bottomMenu = [
+    {
+      text: 'Навигация', menuItems: [
+        {text: 'О нас', href: '#'},
+        {text: 'Новости', href: '#'},
+        {text: 'Служба поддежки', href: '#'},
+        {text: 'Услуги', href: '#'},
+      ]
+    },
+    {
+      text: 'О нас', menuItems: [
+        {text: 'О сервисе', href: '#'},
+        {text: 'Наша команда', href: '#'},
+        {text: 'Вакансии', href: '#'},
+        {text: 'Инвесторы', href: '#'},
+      ]
+    },
+    {
+      text: 'Служба поддержки', menuItems: [
+        {text: 'Соглашения', href: '#'},
+        {text: 'Сообщества', href: '#'},
+        {text: 'Связь с нами', href: '#'},
+      ]
+    },
+  ]
+
+footer.footer
   .container
-    span Footer for footer
+    .footer-wrapper
+      .footer-company
+        .footer-company__logo
+          img(src='/assets/img/logo.svg')
+        .footer-company__description
+          p Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+      .footer-menu
+        +footer-menu(bottomMenu)
+      .footer-subscribtion
+        .footer-subscribtion__title
+         h3 подписка
+        .footer-subscribtion__desc Получайте специальные предложения и новости сервиса
+        .footer-subscribtion__email-field
+          +input-text-with-figure('email', 'Email', ' ')
+

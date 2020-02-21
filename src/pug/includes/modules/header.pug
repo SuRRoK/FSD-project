@@ -1,5 +1,5 @@
 -
-  var mainMenu = [
+  mainMenu = [
     {text: 'Компоненты', href: '/components.html', dropdown: false},
     {text: 'о нас', href: '#', dropdown: false},
     {
@@ -16,17 +16,17 @@
     }
   ]
 
-- var dropdownIcon = 'expand_more'
+- dropdownIcon = 'expand_more'
 
 header.header
   .container
     .header-wrapper
-      .header__logo
+      .header-logo
         a(href='/')
-          img(src='/assets/img/logo.svg')
-      .header__menu-buttons-wrapper
-        nav.header__menu
+          img(src='/assets/img/logo.svg').header-logo__img
+      .header-menu-and-buttons-wrapper
+        nav.header-menu
           +menu(mainMenu, dropdownIcon)
-        .header__user-buttons
+        .header-user-buttons
           +button('#','войти')(class="btn-purple-light header__button")
           +button('#','зарегистрироваться')(class="btn-purple header__button")

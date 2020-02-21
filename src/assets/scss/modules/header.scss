@@ -1,0 +1,59 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &-logo {
+    display: block;
+    width: 106px;
+  }
+  &-wrapper {
+    margin: 15px 140px ;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: $desktopWidth) {
+      max-width: $desktopWidth;
+      margin: 15px 30px ;
+    }
+
+    @media screen and (max-width: $smDesktopWidth) {
+      max-width: $smDesktopWidth;
+      margin: 10px 10px ;
+    }
+
+    @media screen and (max-width: $tableWidth) {
+      max-width: $tableWidth;
+      margin: 5px 10px ;
+    }
+
+    @media screen and (max-width: $phoneWidth) {
+      max-width: $phoneWidth;
+      margin: 5px 5px ;
+    }
+  }
+  &-menu-and-buttons-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  &__button {
+    margin-left: 20px;
+    padding: 11px 25px;
+    @media screen and (max-width: $desktopWidth) {
+      margin-left: 10px;
+    }
+
+    @media screen and (max-width: $smDesktopWidth) {
+      margin-left: 6px;
+    }
+
+    @media screen and (max-width: $tableWidth) {
+      margin-left: 3px;
+    }
+
+  }
+}
+
+

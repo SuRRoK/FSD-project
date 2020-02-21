@@ -10,20 +10,13 @@ mixin button-with-figure (href, buttonText, figure)
   button.btn.btn--with-figure(class!=attributes.class href=href)= buttonText
     i.material-icons.btn--with-figure_figure= figure
 
-mixin dropdown-menu-item (text, href)
-  li.dropdown-menu__item
-    a.main-menu__link(href=href)= text
-
-mixin menu-item (text, href)
-  li.main-menu__item
-    a.main-menu__link(href=href)= text
-
 mixin menu-item-dropdown (text, items, icon)
   li.main-menu__item.main-menu__item-dropdown= text
     i.material-icons.main-menu__item-dropdown-icon= icon
     ul.dropdown-menu
       each val in items
-        +dropdown-menu-item(val.text, val.href)
+        li.dropdown-menu__item
+          a.main-menu__link(href=val.href)= val.text
 
 mixin menu (items, dropdownIcon)
   ul.main-menu
@@ -31,12 +24,39 @@ mixin menu (items, dropdownIcon)
       if val.dropdown
         +menu-item-dropdown(val.text, val.dropdownMenu, dropdownIcon)
       else
-        +menu-item(val.text, val.href)
+        li.main-menu__item
+          a.main-menu__link(href=val.href)= val.text
 
 mixin input-text(name, placeholder, label, type)
   if !type
-    - var type = "text"
-  div.input-field
+    - type = "text"
+  .input-field
     if label
       label(for=name).input-text__label= label
-    input(type=type, name=name, id=name, placeholder= placeholder).input-text
+    input(class!=attributes.class type=type, name=name, id=name, placeholder= placeholder).input-text
+
+-  allowInput = ['text', 'password', 'email']
+mixin input-text-with-figure(name, placeholder, label, type)
+  if !type || !allowInput.includes('type')
+    - type = "text"
+  .input-field
+    if !label || label === ' '
+      label(for=name).input-text__label.input-text_with-figure.input-text_with-figure_no-label= ' '
+      input(class!=attributes.class type=type, name=name, id=name, placeholder= placeholder).input-text
+    else
+      label(for=name).input-text__label.input-text_with-figure= label
+      input(class!=attributes.class type=type, name=name, id=name, placeholder= placeholder).input-text
+
+
+mixin footer-menu-colum (items)
+  each val in items
+    li.footer-menu__item
+      a.footer-menu__link(href=val.href)= val.text
+
+mixin footer-menu (items)
+  .footer-menu-wrapper
+    each val in items
+      ul.footer-menu__column
+        li
+          h3.footer-menu__head= val.text
+        +footer-menu-colum(val.menuItems)

@@ -110,39 +110,24 @@ section, .section {
   position: relative;
   margin: 0 auto;
   max-width: $lgDesktopWidth;
-  @media screen and (max-width: $desktopWidth) {
-    max-width: $smDesktopWidth;
-  }
-  @media screen and (max-width: $smDesktopWidth) {
-    max-width: $tableWidth;
-  }
-  @media screen and (max-width: $tableWidth) {
-    max-width: $phoneWidth;
-  }
-  @media screen and (max-width: $phoneWidth) {
-    max-width: $smPhoneWidth;
-  }
+
+  //@media screen and (max-width: $desktopWidth) {
+  //  max-width: $desktopWidth;
+  //}
+  //@media screen and (max-width: $smDesktopWidth) {
+  //  max-width: $smDesktopWidth;
+  //}
+  //@media screen and (max-width: $tableWidth) {
+  //  max-width: $phoneWidth;
+  //}
+  //@media screen and (max-width: $phoneWidth) {
+  //  max-width: $smPhoneWidth;
+  //}
 }
 
-.header {
-  &-wrapper {
-    margin: 15px 140px ;
-
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  &__menu-buttons-wrapper {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  &__button {
-    margin-left: 20px;
-    padding: 11px 25px;
-  }
-}
+@import "modules/header";
+@import "modules/footer";
+@import "modules/copyright";
 
 .btn-purple {
   background: $purple-gradient;
@@ -163,10 +148,9 @@ section, .section {
 }
 
 .components {
-  margin: 5px;
-}
-.nav-buttons-wrapper {
   display: flex;
+  margin: 5px;
+  align-items: flex-end;
 }
 
 

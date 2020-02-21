@@ -1,0 +1,18 @@
+.copyright {
+  &-wrapper {
+    margin: 23px 140px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.social-bottom {
+  font-size: 24px;
+  line-height: 23px;
+  background-image: $purple-gradient;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-left: 20px;
+}

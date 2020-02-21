@@ -1,0 +1,45 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-wrapper {
+    margin: 100px 140px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 3vw;
+    //display: flex;
+    //justify-content: space-between;
+    //align-items: center;
+  }
+
+  &-company {
+    &__logo {
+      margin-bottom: 20px;
+    }
+  }
+
+  &-menu {
+
+  }
+
+  &-subscribtion {
+
+    &__title {
+      text-transform: uppercase;
+      font-style: normal;
+      font-weight: bold;
+      color: $mainFontColor;
+      line-height: 15px;
+      margin-bottom: 21px;
+    }
+
+    &__desc {
+      margin-bottom: 20px;
+    }
+
+  }
+
+}
+
